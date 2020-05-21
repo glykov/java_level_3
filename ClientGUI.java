@@ -86,7 +86,7 @@ public class ClientGUI extends JFrame implements ActionListener {
             return;
         }
         try (Scanner fin = new Scanner(new FileInputStream(file), "UTF-8")) {
-            while(fin.hasNext())
+            while(fin.hasNextLine())
                 buff.add(fin.nextLine());
         } catch (IOException e) {
             e.printStackTrace();
